@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sale Calculator</title>
+<script type="text/javascript" src="Jquery.js"></script>
+<script type="text/javascript" src="settings.js"></script>
+
+
+<script>
+function calc()
+{
+	var initial_price = parseFloat($('#initial').val());
+	var shipping_price =parseFloat ( $('#shipping').val());
+		if ($('#sales_tax').is(':checked')) 
+			{
+		initial_price = initial_price + initial_price * (localStorage.tax/100);
+		
+			}
+	var total_cost = initial_price + shipping_price + .6;
+	final_price = total_cost/.871;
+	var ebay = final_price * .1
+	var paypal = final_price * .029
+	$('#ebay').text(ebay.toFixed(2));
+	$('#paypal').text(paypal.toFixed(2));
+	$('#cost').text(total_cost.toFixed(2));
+	$('#price').text(final_price.toFixed(2));
+
+}
+
+
+</script>
+</head>
+
+<body>
+
+
+
+Initial Cost of item: <input type="text" id="initial" name="fname" > </br>
+Estimated Shipping Cost: <input type="text" id="shipping" name="fname"></br>
+<input name="checkbox_name" id="sales_tax" type="checkbox"> Include sales tax?</br>
+<input type="submit" value="Submit" onClick="calc()"></br>
+<input type="submit" value="get tax" onClick="get_tax()"></br>
+
+Total Cost:  <span id=cost></span></br>
+Ebay's Cut: <span id=ebay></span></br>
+PayPal's Cut:  <span id=paypal></span></br>
+To Break Even Sell For:  <span id=price></span>
+
+</br>
+
+</br>
+
+</br>
+
+
+
+<a href="settings.html"> Settings </a>
+
+</body>
+</html>
