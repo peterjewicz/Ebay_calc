@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Sale Calculator</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 <script type="text/javascript" src="Jquery.js"></script>
 <script type="text/javascript" src="settings.js"></script>
 
@@ -35,27 +36,41 @@ function calc()
 <body>
 
 
+<div id=main_wrap>
 
-Initial Cost of item: <input type="text" id="initial" name="fname" > </br>
-Estimated Shipping Cost: <input type="text" id="shipping" name="fname"></br>
-<input name="checkbox_name" id="sales_tax" type="checkbox"> Include sales tax?</br>
-<input type="submit" value="Submit" onClick="calc()"></br>
-<input type="submit" value="get tax" onClick="get_tax()"></br>
+	<div id=content_wrap>
+	
+		Initial Cost of item: <input type="text" id="initial" name="fname" > </br>
+		Estimated Shipping Cost: <input type="text" id="shipping" name="fname"></br>
+		<input name="checkbox_name" id="sales_tax" type="checkbox"> Include sales tax?</br>
+		<input type="submit" value="Submit" onClick="calc()"></br>
+		<input type="submit" value="get tax" onClick="get_tax()"></br>
 
-Total Cost:  <span id=cost></span></br>
-Ebay's Cut: <span id=ebay></span></br>
-PayPal's Cut:  <span id=paypal></span></br>
-To Break Even Sell For:  <span id=price></span>
+		Total Cost:  <span id=cost></span></br>
+		Ebay's Cut: <span id=ebay></span></br>
+		PayPal's Cut:  <span id=paypal></span></br>
+		To Break Even Sell For:  <span id=price></span>
+	</br>
 
-</br>
+	</br>
 
-</br>
-
-</br>
-
+	</br>
 
 
-<a href="settings.html"> Settings </a>
+
+	<a href="settings.html"> Settings </a>
+	
+	</div>
+
+	<div id=footer>
+	</div
+
+
+></div>
+
+
+
+
 
 </body>
 </html>
